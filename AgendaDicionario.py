@@ -3,10 +3,7 @@ class Agenda:
         self.contatos = {}
 
     def verificar_vazio(self):
-        if not self.contatos:
-            print("Não há contatos salvos.")
-            return True
-        return False
+        return not self.contatos
 
     def adicionar_contato(self):
         nome = input("Insira o nome do contato: ")
@@ -21,6 +18,7 @@ class Agenda:
 
     def apagar_contato(self):
         if self.verificar_vazio():
+            print("Agenda vazia.")
             return
 
         nome = input("Digite o nome do contato que você deseja apagar: ")
@@ -32,6 +30,7 @@ class Agenda:
 
     def exibir_contato(self):
         if self.verificar_vazio():
+            print("Agenda vazia.")
             return
 
         nome = input("Digite o nome do contato que você deseja exibir: ")
@@ -40,6 +39,7 @@ class Agenda:
 
     def atualizar_contato(self):
         if self.verificar_vazio():
+            print("Agenda vazia.")
             return
 
         nome = input("Digite o nome do contato que você deseja atualizar: ")
@@ -53,6 +53,7 @@ class Agenda:
 
     def listar_todos_contatos(self):
         if self.verificar_vazio():
+            print("Agenda vazia.")
             return
 
         for nome, telefone in self.contatos.items():
