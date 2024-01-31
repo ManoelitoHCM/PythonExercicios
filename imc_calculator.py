@@ -8,9 +8,10 @@ class IMCCalculator:
 
     def calculate_imc(self):
         if self.weight > 0 and self.height > 0:
-            return round(self.weight/(pow(self.height, 2)), 3)
+            return round(self.weight / (pow(self.height, 2)), 3)
         else:
             raise ValueError(f"Um dos valores para altura ou peso inseridos é inválido por ser zero ou inferior.")
+
 
 try:
 

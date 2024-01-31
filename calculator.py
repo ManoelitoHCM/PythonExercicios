@@ -11,8 +11,8 @@ class Calculator:
     def subtract(self, another_value):
         return self.value - another_value
 
-    def multiplication(self, outro_numero):
-        return self.value * outro_numero
+    def multiplication(self, another_value):
+        return self.value * another_value
 
     def division(self, another_value):
         if another_value != 0:
